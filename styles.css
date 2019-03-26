@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.div-one,
+.div-two,
+.div-three {
+    width: 100%;
+    height: 33.33%;
+}
+
+.div-one {
+    background: #000;
+    position: relative;
+}
+
+.div-two {
+    background: cyan;
+    position: relative;
+}
+
+.div-two:before {
+    content: '';
+    position: absolute;
+    border-bottom: 100px solid cyan;
+    border-left: 100vw solid transparent;
+    top: -100px;
+}
+
+.div-two:after {
+    content: '';
+    position: absolute;
+    border-top: 100px solid cyan;
+    border-right: 100vw solid transparent;
+    bottom: -100px;
+    z-index: 1;
+}
+
+.div-three {
+    background: #000;
+    position: relative;
+}
+
+.text {
+    padding: 5%;
+    color: #fff;
+    font-size: 1.2em;
+}
